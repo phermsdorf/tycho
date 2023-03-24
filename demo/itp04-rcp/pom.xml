@@ -20,7 +20,7 @@ Contributors:
 	<name>RCP Parent</name>
 
 	<properties>
-		<tycho-version>2.7.3</tycho-version>
+		<tycho-version>3.0.4</tycho-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -30,8 +30,6 @@ Contributors:
 		<module>example-feature</module>
 		<module>example-feature-2</module>
 		<module>mars</module>
-		<module>root-files</module>
-		<module>root-files-windows</module>
 	</modules>
 
 	<build>
@@ -57,11 +55,6 @@ Contributors:
 						<environment>
 							<os>linux</os>
 							<ws>gtk</ws>
-							<arch>x86_64</arch>
-						</environment>
-						<environment>
-							<os>macosx</os>
-							<ws>cocoa</ws>
 							<arch>x86_64</arch>
 						</environment>
 					</environments>
