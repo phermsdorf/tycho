@@ -17,6 +17,11 @@
       %license
    </license>
 
+   <requires>
+      <import feature="org.eclipse.emf.common" version="2.7.0" match="compatible"/>
+      <import feature="org.eclipse.emf.ecore" version="2.7.0" match="compatible"/>
+   </requires>
+
    <plugin
          id="example-bundle"
          download-size="0"
@@ -50,16 +55,6 @@
          download-size="432"
          install-size="544"
          version="3.201.0.v20220124-1108"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.ui.cocoa"
-         os="macosx"
-         ws="cocoa"
-         download-size="9"
-         install-size="13"
-         version="1.2.400.v20191217-1850"
-         fragment="true"
          unpack="false"/>
 
    <plugin
@@ -410,16 +405,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.e4.ui.workbench.renderers.swt.cocoa"
-         os="macosx"
-         ws="cocoa"
-         download-size="29"
-         install-size="53"
-         version="0.12.600.v20200416-0656"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.e4.ui.workbench.swt"
          download-size="147"
          install-size="289"
@@ -474,46 +459,6 @@
          install-size="92"
          version="1.6.400.v20210924-0641"
          unpack="false"/>
-
-   <plugin
-         id="org.eclipse.equinox.launcher.cocoa.macosx.aarch64"
-         os="macosx"
-         ws="cocoa"
-         arch="aarch64"
-         download-size="39"
-         install-size="124"
-         version="1.2.500.v20220509-0833"
-         fragment="true"/>
-
-   <plugin
-         id="org.eclipse.equinox.launcher.cocoa.macosx.x86_64"
-         os="macosx"
-         ws="cocoa"
-         arch="x86_64"
-         download-size="40"
-         install-size="109"
-         version="1.2.500.v20220509-0833"
-         fragment="true"/>
-
-   <plugin
-         id="org.eclipse.equinox.launcher.gtk.linux.aarch64"
-         os="linux"
-         ws="gtk"
-         arch="aarch64"
-         download-size="84"
-         install-size="265"
-         version="1.2.500.v20220509-0833"
-         fragment="true"/>
-
-   <plugin
-         id="org.eclipse.equinox.launcher.gtk.linux.ppc64le"
-         os="linux"
-         ws="gtk"
-         arch="ppc64le"
-         download-size="71"
-         install-size="241"
-         version="1.2.500.v20220509-0833"
-         fragment="true"/>
 
    <plugin
          id="org.eclipse.equinox.launcher.gtk.linux.x86_64"
@@ -611,50 +556,6 @@
          download-size="18"
          install-size="34"
          version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.swt.cocoa.macosx.aarch64"
-         os="macosx"
-         ws="cocoa"
-         arch="aarch64"
-         download-size="2197"
-         install-size="5095"
-         version="3.120.0.v20220530-1036"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.swt.cocoa.macosx.x86_64"
-         os="macosx"
-         ws="cocoa"
-         arch="x86_64"
-         download-size="2203"
-         install-size="5100"
-         version="3.120.0.v20220530-1036"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.swt.gtk.linux.aarch64"
-         os="linux"
-         ws="gtk"
-         arch="aarch64"
-         download-size="2105"
-         install-size="5114"
-         version="3.120.0.v20220530-1036"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.swt.gtk.linux.ppc64le"
-         os="linux"
-         ws="gtk"
-         arch="ppc64le"
-         download-size="2071"
-         install-size="5151"
-         version="3.120.0.v20220530-1036"
-         fragment="true"
          unpack="false"/>
 
    <plugin
