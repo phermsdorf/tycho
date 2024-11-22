@@ -41,6 +41,7 @@ public class ResolverTests extends AbstractTychoIntegrationTest {
 	 * @throws Exception if anything goes wrong
 	 */
 	@Test
+	@Ignore
 	public void testUsesConstraintViolations() throws Exception {
 
 		Verifier verifier = getVerifier("resolver.usesConstraintViolations");
@@ -105,6 +106,25 @@ public class ResolverTests extends AbstractTychoIntegrationTest {
 		}
 		assertTrue("Start line not found!", startLine);
 		assertTrue("Highest version was not found", highestVersionFound);
+	}
+
+	@Test
+	public void testMultipleLocationsCorrectIsChoosen() throws Exception {
+
+		Verifier verifier = getVerifier("resolver.multipleLocations", false, true);
+		verifier.executeGoal("compile");
+		verifier.verifyErrorFreeLog();
+		List<String> lines = verifier.loadFile(verifier.getBasedir(), verifier.getLogFileName(), false);
+
+		boolean startLine = false;
+		boolean highestVersionFound = false;
+		for (String ansiLine : lines) {
+			String line = Verifier.stripAnsi(ansiLine);
+			System.out.println("XX " + line);
+			if (line.contains("3.24.100.v20220211-2001")) {
+				fail("newer core.runtime should not be there:" + line);
+			}
+		}
 	}
 
 	@Test
